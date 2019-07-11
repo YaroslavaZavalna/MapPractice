@@ -2,6 +2,9 @@ import java.util.*;
 
 public class MyLibrary {
     public MyLibrary() {
+
+    }
+    private void start(){
         List<Book> noBookDay = new ArrayList<>();
         noBookDay.add(new Book());
         List<Book> firstDay = new ArrayList<>();
