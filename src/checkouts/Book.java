@@ -1,3 +1,5 @@
+package checkouts;
+
 public class Book {
 
     private String name;
@@ -21,9 +23,6 @@ public class Book {
 
     @Override
     public String toString() {
-        if(getName()!=null && getAuthor()!=null){
-            return " "+getName()+ " - "+getAuthor();
-        }
-        return " You haven`t taken any books this day!";
+        return " "+getName()+ " - "+getAuthor();
     }
 }
