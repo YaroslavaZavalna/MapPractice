@@ -2,18 +2,18 @@ package checkouts;
 
 import java.util.*;
 
-public class CheckOutHistory {
-    public CheckOutHistory() {
+public class Library {
+    public Library() {
         seeCheckOutHistory();
     }
     private void seeCheckOutHistory(){
-        borrowedBookes();
+        listOfMyBookes();
         List<Book> firstCheckOut = new ArrayList<>();
         List<Book> secondCheckOut = new ArrayList<>();
-        secondCheckOut.add(borrowedBookes().get(0));
-        secondCheckOut.add(borrowedBookes().get(1));
+        secondCheckOut.add(listOfMyBookes().get(0));
+        secondCheckOut.add(listOfMyBookes().get(1));
         List<Book> thirdCheckOut = new ArrayList<>();
-        thirdCheckOut.add(borrowedBookes().get(2));
+        thirdCheckOut.add(listOfMyBookes().get(2));
 
         Map<String, List<Book>> accounting = new HashMap<>();
         accounting.put("2019-07-14", firstCheckOut);
@@ -31,7 +31,7 @@ public class CheckOutHistory {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Which books I have taken on 2019-07-18?"+accounting.getOrDefault("2019-07-18", Collections.emptyList()));
     }
-    private List<Book> borrowedBookes(){
+    private List<Book> listOfMyBookes(){
         List<Book>borrowedBookes = new ArrayList<>();
         Book book1 = new Book("The Invisible Man", "H.G.Wells");
         Book book2 = new Book("Intermezzo", "M.M.Kotsubinskyi");
